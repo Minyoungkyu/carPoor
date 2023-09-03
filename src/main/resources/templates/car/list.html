@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mainpage</title>
+    <!--    <link rel="stylesheet" href="style2.css" />-->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
+
+    <!--    <script src="js/jquery-3.6.4.min.js"></script>-->
+    <!--    <script src="js/script.js"></script>-->
+</head>
+<body>
+<!-- 탑바 -->
+<header>
+    <div class="container">
+        <div class="top-bar__left-box">
+            <!-- 로고 -->
+            <h1>
+                <button title="메인 바로가기" class="logo-link">
+                    <svg
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 166 23"
+                            xml:space="preserve"
+                            class="logo color-blue"
+                    >
+                <g>
+                  <polygon
+                          points="63.76,3.22 63.76,9.47 56.68,9.47 56.68,3.22 52.78,3.22 52.78,19.61 56.68,19.61 56.68,13.02 63.76,13.02 63.76,19.61 67.66,19.61 67.66,3.22 67.46,3.22"
+                          class="st0"
+                  ></polygon>
+                    <polygon
+                            points="81.96,3.22 77.87,9.71 73.8,3.22 69.19,3.22 75.93,13.93 75.93,19.61 79.83,19.61 79.83,13.93 86.56,3.22 86.2,3.22"
+                            class="st0"
+                    ></polygon>
+                    <path
+                            d="M99.11,3.22v12.01c0,0.46-0.34,0.82-0.83,0.82h-6.25V3.22h-3.9v16.39h11.53c1.03,0,1.85-0.3,2.45-0.9c0.6-0.6,0.9-1.42,0.9-2.45V3.22h-0.19H99.11z"
+                            class="st0"
+                    ></path>
+                    <path
+                            d="M118.15,3.22h-11.53v16.39h3.9V6.77h6.26c0.5,0,0.83,0.39,0.83,0.82v12.02h3.9V6.57c0-1.03-0.3-1.85-0.9-2.45 C119.99,3.53,119.17,3.22,118.15,3.22z"
+                            class="st0"
+                    ></path>
+                    <path
+                            d="M136.64,3.22h-11.53v16.39h11.53c1.02,0,1.84-0.3,2.44-0.9c0.6-0.6,0.9-1.42,0.9-2.45V6.57
+          c0-1.03-0.3-1.85-0.9-2.45C138.48,3.53,137.66,3.22,136.64,3.22z M136.09,7.62v7.59c0,0.44-0.32,0.85-0.83,0.85h-6.25V6.77h6.23 C135.75,6.77,136.09,7.13,136.09,7.62z"
+                            class="st0"
+                    ></path>
+                    <path
+                            d="M146.78,3.22c-1.02,0-1.85,0.3-2.45,0.9c-0.6,0.6-0.9,1.42-0.9,2.45v13.04h3.89v-5.07h7.08v5.07h3.9V3.22 H146.78z M154.41,6.77v4.22h-7.08V7.6c0-0.4,0.31-0.83,0.83-0.83H154.41z"
+                            class="st0"
+                    ></path>
+                    <rect
+                            x="162.1"
+                            y="3.22"
+                            width="3.9"
+                            height="16.39"
+                            class="st0"
+                    ></rect>
+                </g>
+                        <g>
+                  <path
+                          d="M22.29,22.83c12.31,0,22.29-5.11,22.29-11.42C44.59,5.11,34.61,0,22.29,0C9.98,0,0,5.11,0,11.41 C0,17.72,9.98,22.83,22.29,22.83z M26.49,17.23c-0.37,0.86-1.01,2.7-2.48,3.44c-0.44,0.22-0.99,0.33-1.49,0.34 c-0.11,0-0.19,0-0.22,0c-4.12,0-7.94-0.57-11.15-1.55c-0.03-0.01-0.1-0.04-0.12-0.05c-0.3-0.1-0.45-0.24-0.45-0.4 c0-0.15,0.08-0.26,0.18-0.36c0.04-0.05,0.11-0.1,0.2-0.18c0.74-0.62,2.97-2.23,7.17-3.84c1.47-0.56,3.31-1.26,5.25-1.67 C24.51,12.72,28.7,12.08,26.49,17.23z M37.75,5.72c0.08-0.14,0.19-0.25,0.38-0.27c0.1-0.01,0.25,0.02,0.46,0.15 c2.62,1.61,4.17,3.62,4.17,5.8c0,3.94-5.06,7.32-12.3,8.8c-0.47,0.09-0.77,0.09-0.88-0.03c-0.07-0.07-0.09-0.2,0-0.35 c0.05-0.08,0.1-0.15,0.19-0.27c3.94-4.65,6.94-11.5,7.8-13.48C37.64,5.95,37.7,5.81,37.75,5.72z M18.16,5.58 c0.37-0.86,1.01-2.7,2.48-3.43c0.45-0.22,0.99-0.33,1.49-0.34c0.11,0,0.19,0,0.22,0c4.12,0,7.94,0.57,11.15,1.55 c0.02,0.01,0.1,0.04,0.12,0.04c0.3,0.1,0.45,0.23,0.45,0.4c0,0.15-0.08,0.26-0.18,0.36c-0.05,0.04-0.11,0.1-0.2,0.18 c-0.74,0.62-2.97,2.23-7.17,3.84c-1.47,0.56-3.32,1.26-5.24,1.67C20.14,10.09,15.95,10.73,18.16,5.58z M14.12,2.61 c0.47-0.09,0.77-0.09,0.88,0.03c0.06,0.07,0.08,0.2,0,0.35c-0.05,0.08-0.1,0.16-0.19,0.27c-3.94,4.65-6.94,11.5-7.8,13.48 c-0.06,0.14-0.13,0.27-0.18,0.36c-0.08,0.14-0.18,0.26-0.37,0.27c-0.11,0.01-0.25-0.02-0.47-0.15 c-2.62-1.61-4.17-3.62-4.17-5.8C1.82,7.48,6.88,4.09,14.12,2.61z"
+                          class="st0"
+                  ></path>
+                </g>
+              </svg>
+                    <span class="ir"></span>
+                </button>
+            </h1>
+            <!-- 메뉴 -->
+            <nav>
+                <!-- 1차메뉴 -->
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+
+                <!-- 2차메뉴 -->
+                <div class="menu-2">
+                    <div class="container">
+                        <nav></nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="top-bar__right-box">
+            <!-- 아이콘 -->
+            <div class="icon-box">
+                <!-- 1 -->
+                <!-- 검색창 -->
+                <a href="#">
+                    <a href="#"><img src="img/free-icon-search.png" alt="" /></a>
+                </a>
+                <!-- 2 -->
+                <!-- 로그인 -->
+                <a href="#"><img src="img/free-icon-user.png" alt="" /></a>
+            </div>
+
+            <!-- 전체메뉴바 -->
+            <div class="all-menubar">
+                <div class="all-menubar-hover">
+                    <a href="#"
+                    ><img src="img/free-icon-menu.png" alt="전체메뉴바"
+                    /></a>
+                </div>
+                <!-- 3차메뉴 -->
+                <nav>
+                    <div class="menu-3">
+                        <div class="container">
+                            <form id="myForm" action="/car/list/hyundai" method="post">
+                                <ul>
+                                    <!-- (li>a[href="#"]{Our Stories})*4 -->
+                                    <li><a href="#">Car Brand</a></li>
+                                    <li><input id="brand1" type="checkbox" name="brand" value="현대" >
+                                        <label for="brand1">현대</label></li>
+                                    <li><input id="brand2" type="checkbox" name="brand" value="기아" >
+                                        <label for="brand2">기아</label></li>
+                                </ul>
+                                <script>
+                                    // 모든 체크박스 요소
+                                    const checkboxes = document.querySelectorAll('input[name="brand"]');
+
+                                    // 각 체크박스에 대한 이벤트 리스너
+                                    checkboxes.forEach((checkbox) => {
+                                    checkbox.addEventListener('change', function () {
+                                    // 체크박스의 형제 레이블
+                                    const label = this.nextElementSibling;
+
+                                    // 체크박스가 체크되었는지 확인하고 레이블의 색상을 변경
+                                    if (this.checked) {
+                                        label.style.color = 'blue'; // 체크되었을 때 파란색으로 변경
+                                    } else {
+                                        label.style.color = 'black'; // 체크 해제되었을 때 검은색으로 변경
+                                    }
+                                    });
+                                    });
+                                </script>
+                                <ul>
+                                    <li><a href="#">Vehicle Size</a></li>
+                                    <li><input id="size1" type="checkbox" name="size" value="소형" >
+                                        <label for="size1">소형</label></li>
+                                    <li><input id="size2" type="checkbox" name="size" value="중형" >
+                                        <label for="size2">중형</label></li>
+                                    <li><input id="size3" type="checkbox" name="size" value="대형" >
+                                        <label for="size3">대형</label></li>
+                                    <li><input id="size4" type="checkbox" name="size" value="소형SUV" >
+                                        <label for="size4">소형SUV</label></li>
+                                    <li><input id="size5" type="checkbox" name="size" value="대형SUV" >
+                                        <label for="size5">대형SUV</label></li>
+                                </ul>
+                                <script>
+                                    // 모든 체크박스 요소
+                                    const checkboxes2 = document.querySelectorAll('input[name="size"]');
+
+                                    // 각 체크박스에 대한 이벤트 리스너를 등록
+                                    checkboxes2.forEach((checkbox) => {
+                                    checkbox.addEventListener('change', function () {
+                                    // 체크박스의 형제 레이블
+                                    const label = this.nextElementSibling;
+
+                                    // 체크박스가 체크되었는지 확인하고 레이블의 색상을 변경
+                                    if (this.checked) {
+                                        label.style.color = 'blue'; // 체크되었을 때 파란색으로 변경
+                                    } else {
+                                        label.style.color = 'black'; // 체크 해제되었을 때 검은색으로 변경
+                                    }
+                                    });
+                                    });
+                                </script>
+                                <ul>
+                                    <li><a href="#">Engine</a></li>
+                                    <li><input id="engine1" type="checkbox" name="engine" value="가솔린" onclick='checkOnlyOne2(this)' >
+                                        <label for="engine1">가솔린</label></li>
+                                    <li><input id="engine2" type="checkbox" name="engine" value="디젤" onclick='checkOnlyOne2(this)'>
+                                        <label for="engine2">디젤</label></li>
+                                    <li><input id="engine3" type="checkbox" name="engine" value="하이브리드" onclick='checkOnlyOne2(this)'>
+                                        <label for="engine3">하이브리드</label></li>
+                                    <li><input id="engine4" type="checkbox" name="engine" value="LPG" onclick='checkOnlyOne2(this)'>
+                                        <label for="engine4">LPG</label></li>
+                                    <li><input id="engine5" type="checkbox" name="engine" value="전기차" onclick='checkOnlyOne2(this)'>
+                                        <label for="engine5">전기차</label></li>
+                                </ul>
+                                <script>
+
+                                    function checkOnlyOne2(element) {
+                                const checkboxes = document.getElementsByName("engine");
+
+                                checkboxes.forEach((cb) => {
+                                    if (cb !== element) {
+                                        cb.checked = false;
+                                        // 체크가 해제되면 레이블의 색상을 검은색으로 변경
+                                        const label = cb.nextElementSibling;
+                                        label.style.color = 'black';
+                                    }
+                                });
+
+                                // 체크 상태를 업데이트한 후, 현재 체크된 checkbox의 레이블 색상을 파란색으로 변경
+                                const label = element.nextElementSibling;
+                                if (element.checked) {
+                                    label.style.color = 'blue';
+                                } else {
+                                    label.style.color = 'black';
+                                }
+                                }
+
+                                </script>
+                                <ul>
+                                    <li>
+                                        <a href="#"
+                                        >Displacement <br />
+                                            Volume(cc)</a
+                                        >
+                                    </li>
+                                    <li><input id="displacement1" type="checkbox" name="displacement" value="1500" onclick='checkOnlyOne3(this)'>
+                                        <label for="displacement1">1500cc 이하</label></li>
+                                    <li><input id="displacement2" type="checkbox" name="displacement" value="2000" onclick='checkOnlyOne3(this)'>
+                                        <label for="displacement2">2000cc 이하</label></li>
+                                    <li><input id="displacement3" type="checkbox" name="displacement" value="3000" onclick='checkOnlyOne3(this)'>
+                                        <label for="displacement3">3000cc 이하</label></li>
+                                </ul>
+                                <script>
+
+                                    function checkOnlyOne3(element) {
+                                const checkboxes = document.getElementsByName("displacement");
+
+                                checkboxes.forEach((cb) => {
+                                    if (cb !== element) {
+                                        cb.checked = false;
+                                        // 체크가 해제되면 레이블의 색상을 검은색으로 변경
+                                        const label = cb.nextElementSibling;
+                                        label.style.color = 'black';
+                                    }
+                                });
+
+                                // 체크 상태를 업데이트한 후, 현재 체크된 checkbox의 레이블 색상을 파란색으로 변경
+                                const label = element.nextElementSibling;
+                                if (element.checked) {
+                                    label.style.color = 'blue';
+                                } else {
+                                    label.style.color = 'black';
+                                }
+                                }
+
+                                </script>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="swiper-container" >
+    <div class="swiper-wrapper" >
+
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+<script>
+
+    // swiper 객체 생성 (class 선택자로)
+    const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    // 비동기식으로 데이터를 받아와서 슬라이더 업데이트
+    function updateSliderWithData(data) {
+        const newSlides = data.map(car => {
+            return `
+                <div class="swiper-slide" >
+                    <div class="car-img img${car.id}" >
+                        <h1>${car.name}</h1>
+                        <a href="#">
+                            <img src="${car.imgUrl}" alt="" />
+                        </a>
+                    </div>
+                </div>
+            `;
+         });
+
+     // Swiper 컨테이너 내부에 슬라이드 아이템을 추가
+    swiper.removeAllSlides(); // 모든 슬라이드 제거
+    swiper.appendSlide(newSlides); // 새로운 슬라이드 추가
+
+    // 슬라이드가 업데이트되었으므로 Swiper를 업데이트
+    swiper.slideTo(0); // 첫 번째 슬라이드로 이동
+
+    }
+
+    // 비동기식으로 데이터를 받아오는 함수
+    function fetchCarDataAndRefreshSlider() {
+        $.ajax({
+            type: "GET",
+            url: "/car/getCars", // 실제로 사용하는 엔드포인트로 변경해야 함
+            dataType: "json",
+            success: function(cars) {
+                updateSliderWithData(cars);
+            },
+            error: function(error) {
+                console.error("Error getting car data:", error);
+            }
+        });
+    }
+
+    // 초기 화면 로딩 시 슬라이더 업데이트
+    $(document).ready(function() {
+        fetchCarDataAndRefreshSlider();
+    });
+
+    $("input[type='checkbox']").change(function() {
+        const formData = $("#myForm").serialize();
+        sendFormData(formData);
+
+    });
+
+    function sendFormData(formData) {
+        $.ajax({
+            type: "POST",
+            url: "/car/list/hyundai",
+            data: formData,
+            success: function(response) {
+                console.log("Data sent successfully");
+                fetchCarDataAndRefreshSlider();
+            },
+            error: function(error) {
+                console.error("Error sending data:", error);
+            }
+        });
+    }
+</script>
+
+
+
+
+</html>
+
+
+<style>
+
+    /* 노멀라이즈 */
+/* Medium : 500 */
+@font-face {
+  font-family: "LeferiPoint-BlackA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: "LeferiPoint-BlackA";
+  /* font-size: 25px; */
+  /* font-weight: 700; */
+}
+body {
+  /* border: 2px solid red; */
+
+  color: #000;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-image: url("https://www.hyundai.com/contents/mainbanner/car-bg-w.jpg");
+}
+/* =========탑바======== */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 24px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1 {
+  margin: 0 auto;
+}
+/* logo 버튼  */
+button {
+  border: none;
+  background-color: #f7f3f2;
+  width: 350px;
+}
+header {
+  height: auto;
+  /*   border: 2px solid red; */
+
+}
+header > .container {
+  /*   border: 2px solid orange; */
+  /*
+	그리드
+	양 옆 여백 값 : 20px
+	요소와 요소사이에 여백: 40px
+	*/
+  width: 1920px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  /*
+	top-bar__left-box와 top-bar__right-box를 한줄에 같이
+	나오게 하는 용도
+	*/
+}
+header > .container > .top-bar__left-box {
+  /*   border: 2px solid indigo; */
+  flex-grow: 1;
+  flex-basis: 0;
+  /* height: 40px; */
+  display: flex;
+  /* h1과, svg를 한줄에 같이 놓기위한 코드 */
+  /* 	align-items: center; */
+}
+header > .container > .top-bar__left-box > h1 {
+  /* margin-right: 10px; */
+  /*   border: 2px solid yellow; */
+  display: flex;
+  width: 280px;
+}
+header > .container > .top-bar__left-box > h1 > svg {
+  width: 200px;
+  /* 	background-color: red; */
+}
+header > .container > .top-bar__left-box > nav {
+  /*   border: 2px solid yellow; */
+}
+/* nav에 마우스를 올렸을때 자식인 .menu-2가 나온다. */
+header > .container > .top-bar__left-box > nav:hover > .menu-2 {
+  display: block;
+}
+header > .container > .top-bar__left-box > nav > ul {
+  display: flex;
+}
+header > .container > .top-bar__left-box > nav > ul > li {
+  margin-left: 10px;
+  margin-right: 10px;
+  /*   border: 1px solid blue; */
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2차메뉴 */
+header > .container > .top-bar__left-box > nav > .menu-2 {
+  /*   border: 1px solid red; */
+  /* position: absolute;
+  height: 300px;
+  left: 0;
+  top: 100%;
+  width: 100%; */
+  display: none;
+}
+
+/* 오른쪽바 */
+header > .container > .top-bar__right-box {
+  /* border: 2px solid indigo; */
+  /* flex-> container임 */
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  /* move-text와 icon-box를 한줄에 같이 나오게하기 위한 코드	 */
+  /* align-items: center; -> container여서 item아니여서 사용x */
+  justify-content: flex-end;
+}
+
+/* hover하면 3차메뉴바 나옴 */
+header > .container > .top-bar__right-box > nav:hover > .menu-3 {
+  display: block;
+}
+header > .container > .top-bar__right-box > .all-menubar:hover > nav > .menu-3 {
+  display: block;
+}
+
+/* 3차메뉴 */
+header > .container > .top-bar__right-box > .all-menubar > nav > .menu-3 {
+  /*   border: 1px solid red; */
+  position: absolute;
+  height: 500px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: none;
+  z-index: 10;
+  /* min-width: var(--site-width); */
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container {
+  width: 1920px;
+
+  /* border: 2px solid orange; */
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  /* width: var(--site-width); */
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container::before {
+  content: "";
+  width: 913px;
+  height: 500px;
+
+  /* border: 2px solid yellow; */
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container
+  > form {
+  /*
+	flex-item이기 때문에 width가 auto일때 0으로 작동된다.
+	flex-item은 넓이가 최소화 된다는 특징을 가지고있기 때문이다
+	*/
+  width: 940px;
+  display: flex;
+  background-color: rgba(248, 242, 224, 0.8);
+  border: none;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  margin-top: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: flex-end;
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container
+  > form
+  > ul {
+  width: 240px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  /* background-size: 20px; */
+  /* border: 1px solid blue; */
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container
+  > form
+  > ul
+  > li {
+  /* border: 1px solid indigo; */
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > nav
+  > .menu-3
+  > .container
+  > form
+  > ul
+  > li
+  > input {
+  /* background-color: #dedede; */
+  /* border: 1px solid blue; */
+  display : none;
+}
+
+header > .container > .top-bar__right-box > .all-menubar {
+  /* border: 1px solid yellow; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header > .container > .top-bar__right-box > .all-menubar > .all-menubar-hover {
+  /* border: 1px solid orange; */
+  display: flex;
+}
+
+/* 전체메뉴바 조절 */
+header
+  > .container
+  > .top-bar__right-box
+  > .all-menubar
+  > .all-menubar-hover
+  > a
+  > img {
+  width: 60px;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+/* 모든 메뉴를 마우스 인식 시 배경색을 변경 */
+.all-menubar ul > li:hover > label {
+  background-color: rgb(252, 241, 178, 0.5);
+  border-radius: 10px;
+  padding: 15px 10px 15px 10px;
+}
+
+/* 2차 메뉴가 보이도록 만들어 보자 */
+.all-menubar ul > li:hover > ul {
+  display: block;
+}
+
+/* icon */
+header > .container > .top-bar__right-box > .icon-box {
+  /* border: 2px solid yellow; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* display: flex; 적용해야 align-items: center; 작동가능 */
+header > .container > .top-bar__right-box > .icon-box > a > img {
+  margin-left: 10px;
+  width: 60px;
+  vertical-align: bottom;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/*  차 사진 */
+.swiper-slide img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 10%);
+    z-index: 1;
+    width: 1200px;
+    height : 500px;
+}
+
+/*  차 이름 */
+.swiper-slide h1 {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    transform: translate(10%, 50%);
+    z-index: 2;
+}
+
+</style>
